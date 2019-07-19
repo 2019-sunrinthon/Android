@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.jjmin.sunrinthon.adapter.KeyListAdapter
-import com.jjmin.sunrinthon.adapter.MainListAdapter
 import com.jjmin.sunrinthon.data.KeyData
 import kotlinx.android.synthetic.main.fargment_key.view.*
 
