@@ -3,13 +3,15 @@ package com.jjmin.sunrinthon.activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jjmin.sunrinthon.*
-
+import com.jjmin.sunrinthon.adapter.CommunityAdapter
+import com.jjmin.sunrinthon.data.model.Communy
 
 
 import com.jjmin.sunrinthon.data.model.LoginData
@@ -74,7 +76,5 @@ class MainActivity : AppCompatActivity() {
             transaction.replace(R.id.frame_layout, fragment).commit()
             true
         }
-
-
 
 }

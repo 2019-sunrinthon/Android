@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -44,8 +45,9 @@ class ComunicationFragment : Fragment() {
         adapter.submitList(array)
 
         view.fab.onClick {
-            startActivityForResult(Intent(activity,AddMemoActivity::class.java),100)
+            this@ComunicationFragment.startActivityForResult(Intent(activity,AddMemoActivity::class.java),100)
         }
+
 
         return view
     }
@@ -60,9 +62,19 @@ class ComunicationFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK){
             if(requestCode == 100){
+                Log.e("Asdfasdf","asdfasdf")
                 var name = data?.getStringExtra("name")as String
                 var content = data?.getStringExtra("content")as String
-                array.add(Communy(name,content,"나재민"))
+                array.clear()
+                array.add(Communy(name,content,"나재민1"))
+                array.add(Communy("나는 OS를 만들었다","sadf","독고현"))
+                array.add(Communy("나는 대회 총 상금이 3억원 이상이다","asdf","나재민"))
+                array.add(Communy("나는 모의고사 국 영 수 합이 3이 나온적이있다.","Asdf","독고현"))
+                array.add(Communy("나는 작성한 논문 중에 50회 이상 인용된 적이 있다.","asdf","윤성현"))
+                array.add(Communy("나는 토익 950점 이상이다.","Asdf","독고현"))
+                array.add(Communy("나는 전국 혹은 소년 체전에 출전한 경험이있다.","asdf","운성현"))
+                array.add(Communy("나는 국내 3부 리그 안에서 활동 한다.","sadf","독고현"))
+                view?.communityRecycler!!.adapter = adapter
                 adapter.submitList(array)
             }
         }

@@ -12,8 +12,8 @@ class ViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view)
 
-        name = Intent().getStringExtra("name")
-        content = Intent().getStringExtra("contnet")
+        name = intent.getStringExtra("title")
+        content = intent.getStringExtra("contnet")
 
         viewTitle.text = name
         viewContent.text = content

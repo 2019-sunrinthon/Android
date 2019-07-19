@@ -36,7 +36,7 @@ class CommunityAdapter : ListAdapter<Communy,CommunityAdapter.ViewHolder1>(itemC
 
         holder.itemView.onClick {
             var intent = Intent(holder.itemView.context,ViewActivity::class.java)
-            intent.putExtra("name",item.title)
+            intent.putExtra("title",item.title)
             intent.putExtra("contnet",item.content)
             holder.itemView.context.startActivity(intent)
         }
