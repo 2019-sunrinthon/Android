@@ -42,12 +42,6 @@ class MainActivity : AppCompatActivity() {
 
         init()
 
-        mainBtn.onLongClick{
-
-            userDelete()
-
-            return@onLongClick
-        }
     }
 
     fun init(){
@@ -56,11 +50,6 @@ class MainActivity : AppCompatActivity() {
         fragment = HomeFragment.newInstance()
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, fragment).commit()
-    }
-
-    fun userDelete() {
-        SharedUtils.delete()
-        finish()
     }
 
     val mOnNavigationItemSelectedListener =
