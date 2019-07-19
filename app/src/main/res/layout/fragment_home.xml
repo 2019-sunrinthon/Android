@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context=".HomeFragment">
+
+
+    <TextView
+            android:id="@+id/mainTopTv"
+            android:textSize="22sp"
+            android:textColor="#ffa4a2"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/mainLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 능력은 어디까지인가?"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainLayout"
+            app:layout_constraintTop_toBottomOf="@+id/mainTopTv"
+            app:layout_constraintBottom_toTopOf="@+id/mainBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mainRecyclerview"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:id="@+id/mainBtn"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/mainLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_btn"
+            android:text="확인"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginTopLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/loginEtLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/loginTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="#ffa4a2"
+                android:textSize="44sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="나만의 모습을 찾아주는 서비스"
+                android:textColor="#ffa4a2"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTv"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginEtLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/loginBtnLayout"
+            app:layout_constraintTop_toBottomOf="@+id/loginTopLayout">
+
+
+        <EditText
+                android:id="@+id/loginEmailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="43dp"
+                android:textColorHint="#8d8d8d"
+                android:layout_marginRight="43dp"
+                android:background="@drawable/bg_login_et"
+                android:hint="E-Mail"
+                android:paddingLeft="15dp"
+                android:elevation="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/loginPasswdEt"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <EditText
+                android:id="@+id/loginPasswdEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login_et"
+                android:textColorHint="#8d8d8d"
+                android:elevation="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="43dp"
+                android:paddingLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="43dp"
+                android:hint="Password"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginEmailEt"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginEtLayout">
+
+        <Button
+                android:id="@+id/loginFinishBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginRight="42dp"
+                android:background="@drawable/bg_login_btn"
+                android:letterSpacing="0.04"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.kakao.usermgmt.LoginButton
+                android:id="@+id/loginKakaoBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="42dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/loginSignup"
+                app:layout_constraintTop_toBottomOf="@+id/loginFinishBtn"/>
+
+        <TextView
+                android:id="@+id/loginSignupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아직 회원이 아니신가요?"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/loginSignup"
+                app:layout_constraintTop_toBottomOf="@+id/loginKakaoBtn"/>
+
+        <TextView
+                android:id="@+id/loginSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/loginSignupTv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginKakaoBtn"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
